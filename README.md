@@ -1,6 +1,6 @@
 # 441work
 Classwork for Web Technologies
-![blue flower](homeAssets\Images\Stationery background.jpg)
+
 ## About Me
 Hi! My name is Mariah, and this is my GitHub page!
 ## About this Site
