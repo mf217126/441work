@@ -8,3 +8,8 @@ This GitHub is being used for my classwork for 441. It will be showing my websit
 
 The url for the site is **here**:
 https://mf217126.github.io/441work/
+
+
+## Class Site
+
+https://github.com/Montana-Media-Arts/441-web-technologies
