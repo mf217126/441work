@@ -11,11 +11,11 @@
   <p id="display"></p>
   <script type="text/javascript">
   function timer(){
-    var secs = 10;
+    var secs = 21;
 
     var clock = setInterval(function() {
       var print = document.getElementById('display');
-      if (secs == 0) {
+      if (secs == 1) {
         clearInterval(clock);
         print.innerHTML = "Boom!";
         document.body.style.background = "red";
@@ -25,7 +25,7 @@
         print.innerHTML = secs;
         document.body.style.background = "green";
       }
-    },500);
+    },150);
   }
   </script>
 </body>
