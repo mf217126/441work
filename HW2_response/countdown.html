@@ -18,10 +18,12 @@
       if (secs == 0) {
         clearInterval(clock);
         print.innerHTML = "Boom!";
+        document.body.style.background = "red";
       }
       else {
         secs = secs-1;
         print.innerHTML = secs;
+        document.body.style.background = "green";
       }
     },500);
   }
