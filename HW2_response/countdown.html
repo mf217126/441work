@@ -6,14 +6,25 @@
 
 <body>
 
-  <button> Start Timer </button>
-  <script>
-    var button = document.querySelector("button");
-    button.addEventListener("click",function(){
-      setTimeout(function(){
-        document.body.style.bacground = "red";
-      }, 2000);
-    })
+  <button type="button" name="button" onclick="timer()"> Start Timer </button>
+  <p id="display"></p>
+  <p id="display"></p>
+  <script type="text/javascript">
+  function timer(){
+    var secs = 10;
+
+    var clock = setInterval(function() {
+      var print = document.getElementById('display');
+      if (secs == 0) {
+        clearInterval(clock);
+        print.innerHTML = "Boom!";
+      }
+      else {
+        secs = secs-1;
+        print.innerHTML = secs;
+      }
+    },500);
+  }
   </script>
 </body>
 </html>
