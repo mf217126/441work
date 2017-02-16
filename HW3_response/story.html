@@ -16,11 +16,82 @@
         border: 2px dashed red;
       }
    </style>
-   Myville
+   <title>Myville</title>
  </head>
  <body>
-   <p id = "storybody"> Welcome to Myville! lkjowienaoinfodihoghksjd osioedgnj. toehiirhs oiwehro jshiuaheghj. </p>
+   <div class = "storybody">
+   <p> Welcome to Myville, where anything is possible! There are so many choices to be made, so many ways this could go right…or go wrong. You’re starting a new career here, in a new home, and all you have now is a bike and a cruddy little apartment. Oh, and $100 of money left over after rent, appliances, and food bills have been paid for the month.
+You decide to get out and explore the town you’re in. What do you choose to do? </p>
+    <div class = "choices">
+      <button id = "first" type="button" name="button" onclick="choice1()" alt = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?"> Walk </button>
+      <button id = "first" type = "button" name ="button" onclick = "choice2()"> Bike </button>
+    </div>
+    <p id = "firstchoice"></p>
+    <div class = "choices">
+      <button id="investigate" type = "button" name = "button" onclick="choice3()"></button>
+      <button id="ignore" type = "button" name = "button" onclick = "choice4()"></button>
+      <button id="help" type = "button" name = "button" onclick = "choice5()"></button>
+      <button id="ignore2" type = "button" name = "button" onclick = "choice6()"></button>
+    </div>
+    <p id = "secondchoice"></p>
+   <script type="text/javascript">
 
+      function choice1(){
+//        var buttons = document.body.getElementsByTagName("button");
+//        for (var i = buttons.length - 1; i >= 0; i--){
+//          var button = buttons[i];
+//          if (button.alt){
+//            var text = document.createTextNode(button.alt);
+//            button.parentNode.replaceChild(text,button);
+//          }
+//        }
+        var print, remove, choice1, choice2;
 
- <body>
+        print = document.getElementById('firstchoice');
+        remove = document.getElementsByTagName('button');
+        choice1 = document.getElementById('investigate');
+        choice2 = document.getElementById('ignore')
+        choice1.innerHTML = "Investigate";
+        choice2.innerHTML = "Ignore it"
+//        remove.append("b");
+        print.innerHTML = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?";
+        for (var i = 1; i >= 0; i--){
+          remove[i].remove();
+//          if (button.alt){
+//            var text = document.createTextNode(button.alt);
+//            image.parentNode.replaceChild(text, button);
+//          }
+        }
+      }
+
+      function choice2(){
+        var print, remove, choice1, choice2;
+
+        print = document.getElementById('firstchoice');
+        remove = document.getElementsByTagName('button');
+        choice1 = document.getElementById('help');
+        choice2 = document.getElementById('ignore2')
+        choice1.innerHTML = "Help them";
+        choice2.innerHTML = "Ignore them"
+
+        print.innerHTML = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?";
+        for (var i = 1; i >= 0; i--){
+          remove[i].remove();
+
+        }
+      }
+
+      function choice3(){
+        var print, remove, choice1;
+        print = document.getElementById('secondchoice');
+        remove = document.getElementsByTagName('button');
+        var t = 0;
+        var pets = []
+
+      }
+    </script>
+
+  </div>
+</body>
+
 </html>
