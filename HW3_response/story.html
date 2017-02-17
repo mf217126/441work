@@ -10,11 +10,16 @@
         border: 4px dashed darkgreen;
       }
       .choices {
-        float: none;
         margin: 2px;
         margin-top: 8px;
         padding: 5px;
         border: 2px dashed red;
+        text-align: center;
+      }
+      #body {
+        float: left;
+        margin:3px;
+        border: 2px solid black;
       }
    </style>
    <title>Myville</title>
@@ -23,18 +28,15 @@
    <div class = "storybody">
    <p> Welcome to Myville, where anything is possible! There are so many choices to be made, so many ways this could go right…or go wrong. You’re starting a new career here, in a new home, and all you have now is a bike and a cruddy little apartment. Oh, and $100 of money left over after rent, appliances, and food bills have been paid for the month.
 You decide to get out and explore the town you’re in. What do you choose to do? </p>
-    <div class = "choices">
+    <div id = "set1" class = "choices">
       <button id = "first" type="button" name="button" onclick="choice1()" alt = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?"> Walk </button>
       <button id = "first" type = "button" name ="button" onclick = "choice2()"> Bike </button>
     </div>
-    <p id = "firstchoice"></p>
-    <div class = "choices">
-      <button id="investigate" type = "button" name = "button" onclick="choice3()"></button>
-      <button id="ignore" type = "button" name = "button" onclick = "choice4()"></button>
-      <button id="help" type = "button" name = "button" onclick = "choice5()"></button>
-      <button id="ignore2" type = "button" name = "button" onclick = "choice6()"></button>
-    </div>
-    <p id = "secondchoice"></p>
+    <div id = "firstchoice"></div>
+    <div id = "secondchoice"></div>
+    <div id = "thirdchoice"></div>
+    <div id = "fourthchoice"></div>
+
    <script type="text/javascript">
 
       function choice1(){
@@ -46,50 +48,203 @@ You decide to get out and explore the town you’re in. What do you choose to do
 //            button.parentNode.replaceChild(text,button);
 //          }
 //        }
-        var print, remove, choice1, choice2;
+        var print, remove;
 
-        print = document.getElementById('firstchoice');
-        remove = document.getElementsByTagName('button');
-        choice1 = document.getElementById('investigate');
-        choice2 = document.getElementById('ignore')
-        choice1.innerHTML = "Investigate";
-        choice2.innerHTML = "Ignore it"
+          print = document.getElementById('firstchoice');
+          remove = document.getElementById('set1');
 //        remove.append("b");
-        print.innerHTML = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?";
-        for (var i = 1; i >= 0; i--){
-          remove[i].remove();
+          print.innerHTML = "<p> You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?</p>"
+            + "<div id='set2' class = 'choices'>"
+            + "<button id='investigate' type = 'button' name = 'button' onclick='choice3()'>Investigate</button>"
+            + "<button id='ignore' type = 'button' name = 'button' onclick = 'choice4()'>Ignore it</button>"
+//            + "<script type = 'text/javascript'> function buttons(){var choice1, choice2; choice1 = document.getElementById('investigate'); choice2 = document.getElementById('ignore'); choice1.innerHTML = 'Investigate'; choice2.innerHTML = 'Ignore it';}"
+            + "</div>";
+          remove.remove();
 //          if (button.alt){
 //            var text = document.createTextNode(button.alt);
 //            image.parentNode.replaceChild(text, button);
 //          }
-        }
       }
 
       function choice2(){
-        var print, remove, choice1, choice2;
+        var print, remove;
 
-        print = document.getElementById('firstchoice');
-        remove = document.getElementsByTagName('button');
-        choice1 = document.getElementById('help');
-        choice2 = document.getElementById('ignore2')
-        choice1.innerHTML = "Help them";
-        choice2.innerHTML = "Ignore them"
+          print = document.getElementById('firstchoice');
+          remove = document.getElementById('set1');
 
-        print.innerHTML = "You decide to take a walk. The neighborhood really isn’t that bad; not once you look past the crumbling walls and rusted pickups sitting on cinderblocks; old auto projects that the owners never got around to finishing. There are trees and vines up all over the place, and although the yards are ill-tended and house rocky soil, at least there is some green, so that isn’t so bad. You hear a rustling in some currant bushes as you pass by. What do you do?";
-        for (var i = 1; i >= 0; i--){
-          remove[i].remove();
-
-        }
+          print.innerHTML = "<p>You decide to take your bike. You feel like getting out of that confining apartment as fast as possible, hopefully to not only get some exercise, but to enjoy your last day of freedom before work. You notice that you are heading out of your neighborhood and into the nicer part of town. The houses are bigger, and the yards are well-kept. Not only are the lawns trimmed, but it appears as if some residents have taken the time to hire landscapers. You are so busy admiring the flowers and shrubbery that you don’t notice when you run into someone else with your bike. There’s a loud crash, and it appears as if the other person is dazed. What do you do?</p>"
+            + "<div id='set2' class = 'choices'>"
+            + "<button id='help' type = 'button' name = 'button' onclick = 'choice5()'>Help them</button>"
+            + "<button id='ignore2' type = 'button' name = 'button' onclick = 'choice6()'>Ignore them</button>"
+//            + "<script type = 'text/javascript'> function buttons(){var choice1, choice2; choice1 = document.getElementById('investigate'); choice2 = document.getElementById('ignore'); choice1.innerHTML = 'Investigate'; choice2.innerHTML = 'Ignore it';}"
+            + "</div>";
+          remove.remove();
       }
 
       function choice3(){
-        var print, remove, choice1;
+        var print, remove, choice1, animal, adoption, scenario;
         print = document.getElementById('secondchoice');
-        remove = document.getElementsByTagName('button');
-        var t = 0;
-        var pets = []
+        remove = document.getElementById('set2');
+        choice1 = ["...a puppy!","...a baby turtle!","...a kitten!","...a baby skunk!"];
+        animal = Math.floor(choice1.length*Math.random());
 
+        if (animal == 0){
+          adoption = "<p>...a puppy! Aww! The little guy is squirming around and wagging happily. In fact, the canine is wagging so hard that the pup is practically vibrating! This baby animal will make a great companion as you start off on this new adventure called life. What’s your new buddy’s name?</p>";
+        }
+        else if (animal == 1) {
+          adoption = "<p>...a baby turtle! Aww, how cute! You scoop up the terrified terrapin and make a trap of your hands. The head and legs withdraw, and you notice right away the shell is a beautiful collage of greens, blues, and reds. You decide to name the shelled reptile.</p>";
+        }
+        else if (animal == 2) {
+          adoption = "<p>...a kitten! The tiny feline is so cute and fluffy, you can’t help but fall in love with the little furball as soon as you see that tiny wet nose and hear that rumbling purr. You decide the baby animal should have a name.";
+        }
+        if (animal == 3) {
+          scenario = "<p>...a baby skunk! Aw, how cu...Oh, wait...WHAT! Oh, crud, oh crud ohcrud! By the time you realize exactly what you’ve uncovered, it’s too late. The baby skunk has already lifted its tail and has sprayed you in the face. Your eyes are stinging, and everything just…stinks. What do you do? </p>"
+          + "<div id = 'sprayed' class = 'choices'>"
+          + "<button id = 'tomato' type = 'button' name = 'button' onclick = 'choice7()'>Buy Tomato Juice</button>"
+          + "<button id = 'skunk' type = 'button' name = 'button' onclick = 'choice8()'>Take the Baby Skunk Home!</button>"
+          + "</div>";
+        }
+        else {
+          scenario = adoption + "<div id = 'pets' class= 'choices'>"
+          //        + "<button id = 'male' type = 'button' name = 'button' onclick = 'choicem()'> Male </button>"
+          //        + "<button id = 'female' type = 'button' name = 'button' onclick = 'choicef()'> Female </button>"
+          + "<input type = 'text' id='name' value = 'Name Your Pet!'>"
+          + "<button type = 'button' name = 'button' onclick = 'choiceName()'>Submit!</button>"
+          + "</div>";
+
+        }
+
+        print.innerHTML ="<p> You choose to investigate. What is making that sound? You slow down and carefully approach. Not only are the branches rattling, but you hear another strange sound. You pull back the branches to reveal…</p>"
+        + scenario;
+
+        remove.remove();
       }
+
+
+    function choiceName(){
+      var name, remove, print;
+      name = document.getElementById("name").value;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("pets");
+      print.innerHTML = "<p> Welcome, "
+        + name
+        +"! Does "
+        + name
+        +" need anything before you go home? </p>"
+        +"<div id = 'complete1' class = 'choices'>"
+          +"<button id = 'continue' type = 'button' name = 'button' onclick = 'choice9()'>Yes</button>"
+          +"<button id = 'finish' type = 'button' name = 'button' onclick = 'choice10()'>No</button>"
+          +"</div>";
+          remove.remove();
+    }
+    function choiceName2(){
+      var name, remove, print;
+      name = document.getElementById("name").value;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("name2");
+      print.innerHTML = "<p> Welcome, "
+        + name
+        +"! This baby skunk shall now live with you forever. Does "
+        + name
+        +" need anything before you go home...? Yeah, you're right. How much could a skunk possibly need? </p>"
+        +"<p>The next day you lose your job – (but it was only on the first day!). Your boss apparently can’t stand recreational drug abuse or liars, which was…nice to know about him. Regardless of the timing, you’re happy. You may be living out on the streets and (unsuccessfully) panhandling for food, but you have your pet skunk with you and the clothes on your back and…well…what more could you ask for? Sure, it gets cold some nights, and it will be even more so in the winter, but you’ve got your pet to keep you warm! And "
+        + name
+        + "'s spray burns enough that you shouldn’t get too cold, right? Maybe after the rush hour is over you can go visit that soup kitchen. Mmmm…mystery meat Mondays!</p>"
+        +"<p>The End.</p>";
+          remove.remove();
+    }
+
+    function choice4(){
+      var print, remove;
+      print = document.getElementById("secondchoice");
+      remove = document.getElementById("set2");
+      print.innerHTML = "<p>You choose to ignore the rustling and continue on. You feel a bit weirded out by the sounds, to be honest, but you figure it’s probably some stupid bird looking for litter, which seems to be common in this area. Either that or it’s a snake, which…you really would rather not deal with right now. As you continue walking, you come upon a building that looks like some sort of soup kitchen. There are people, perhaps even from your neighborhood going there for a free meal. What do you do?</p>"
+      + "<div id = 'soupkitchen' class = 'choices'>"
+      + "<button id = 'volunteer' type = 'button' name = 'button' onclick = 'choice11()'>Volunteer to Work There</button>"
+      + "<button id = 'ignore3' type = 'button' name = 'button' onclick = 'choice12()'>Ignore It and Pass On</button>"
+      + "<button id = 'eat' type = 'button' name = 'button' onclick = 'choice13()'>Get a Meal There</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice5(){
+      var print, remove;
+      print = document.getElementById("secondchoice");
+      remove = document.getElementById("set2");
+      print.innerHTML = "<p>You choose to help them. After all, it was your fault you crashed in the first place, and they could be seriously hurt! Luckily, they aren’t too bad off, though you do get told off for riding on the sidewalks (which is unlawful, for some reason). You soon come to realize that the person you ran into is none other than the secretary to Luke Rative, one of the richest men in the country. She has straight brown hair and large, black-rimmed glasses. She is wearing a blouse and slacks and appears as though she has just gotten out of a meeting, even though you are still in the suburbs. You tell her about your new life here in Myville, and apologize profusely for running into her (literally). She is surprisingly forgiving and says it’s no problem. In fact, she even offers you a position at the company as his personal go-fer! It will pay seven times the job you have now. How do you respond?</p>"
+      + "<div id='joboffer' class = 'choices'>"
+      + "<button id = 'Yesss' type = 'button' name = 'button' onclick = 'choice14()'>Of Course!</button>"
+      + "<button id = 'Nooo' type = 'button' name = 'button' onclick = 'choice15()'>No, Thank You</button>"
+      + "<button id = 'Maybeee' type = 'button' name = 'button' onclick = 'choice16()'>I'll Think About It...</button>"
+      + "</div>";
+      remove.remove();
+    }
+
+    function choice6(){
+      var print, remove;
+      print = document.getElementById("secondchoice");
+      remove = document.getElementById("set2");
+      print.innerHTML = "<p> You choose to ignore them. After all, it was their fault for stepping out onto the sidewalk without looking first. I mean, for Pete’s sake! Everyone knows to look both ways before they step out into traffic (though, you aren’t quite sure a bike counts as traffic). Unfortunately for you, a motorcycle cop notices what you did and he turns his siren’s on. You look behind you to notice flashing lights and a very disgruntled officer. How do you respond? </p>"
+      + "<div id = 'copout' class = 'choices'>"
+      + "<button id = 'speeddemon' type = 'button' name = 'button' onclick = 'choice17()'>Pedal Faster</button>"
+      + "<button id = 'obedience' type = 'button' name = 'button' onclick = 'choice18()'>Stop for Him</button>"
+      + "</div>";
+    }
+    function choice7(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("sprayed");
+      print.innerHTML = "<p>You decide to go to the store right away to get some tomato juice. Sure, it’s using some of your scant money (you were planning on living off of boiled water and ramen before; now you’ll have to do with rocks), but you need to smell good for your first day on the job tomorrow, and skunk spray doesn’t de-odorize itself. Of course, people give you weird looks as you go by, but that’s to be expected. After all, it smells like you’ve been smoking and recreational marijuana is outlawed in this State. One little old lady gives you the stink-eye, and you quickly purchase the acidic liquid and leave the store. You don’t need someone else’s foul attitude on top of the stench of baby weasel perfume. When you get home, you immediately </p>"
+      + "<div id = 'tomatojuice' class = 'choices'>"
+      + "<button id = 'bath' type = 'button' name = 'button' onclick = 'choice19()'>Take a Tomato Juice Bath</button>"
+      + "<button id = 'soup' type = 'button' name = 'button' onclick = 'choice20()'>Make Tomato Soup"
+      + "</div>";
+      remove.remove();
+    }
+    function choice8(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("sprayed");
+
+      print.innerHTML = "<p>You decide to take the baby skunk home. The little animal is just so cute and helpless…from those little beady eyes to the white-striped tail to the sharply clawed paws. What will you name this creature?</p>"
+      + "<div id = 'name2' class = 'choices'>"
+      + "<input type = 'text' id = 'name' value = 'Name Your Skunk!'>"
+      + "<button type = 'button' name = 'button' onclick = 'choiceName2()'>Submit!</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice11(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("soupkitchen");
+
+      print.innerHTML = "<p> You decide to volunteer for the soup kitchen. It’s a great experience, and it’s also a good way for you to get involved in your community. It doesn’t pay, of course, so that’s one downside; however, you do get a free meal once a week, and the emotional benefits are well worth your time as you grow more as an individual. As you continue to work and become a part of your community, you realize that living in Myville might not be so bad after all; maybe you can make a life here for yourself, and enjoy it, too! That’s all you can really ask for, after all. This way, you can not only reap the benefits of getting a home and a job, but also give back to your community by volunteering. It’s just one more step toward your future. </p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice12(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("soupkitchen");
+      print.innerHTML = "<p>You ignore the soup kitchen and pass on. As you do so, you notice you are getting into the business district of Myville. Here, the buildings are so tall they scratch the sky, and people are dressed much more nicely than those who live in your area. Nervously, you notice that people appear much more professional than you thought they would. You make a mental note to get better clothes later on, and continue forward. You notice a JaeCei Yenny's and think, why not? As you go to get clothes that look a little more “professional”, you hear shouting at the front of the store. You go to investigate and realize there’s a robbery in progress. What do you do?</p>"
+      + "<div id = 'robbery' class = 'choices'>"
+      + "<button id = 'phonecall' type = 'button' name = 'button' onclick = 'choice21()'>Call 911</button>"
+      + "<button id = 'mommy!' type = 'button' name = 'button' onclick = 'choice22()'>Cry for Your Mommy!</button>"
+      + "<button id = 'herotime' type = 'button' name = 'button' onclick = 'choice23()'>Daringly Rush Forward to Save the Day!</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice13(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("soupkitchen");
+      print.innerHTML = "<p>You choose to eat there. After all, they are giving out free meals, and, well, who can turn down a free meal, right? It’s beef stroganoff, though you’re pretty sure the stuff in here is roadkill because it tastes too wild to be actual beef. And the creamy sauce on top tastes a little…sour. Despite this, you meet new people and have some interesting conversations. After the meal, you go home to get ready for tomorrow.</p>"
+      + "<p>You wake up in the middle of the night and realize you’re sick. Man, you knew that food was too good to be true! In the morning, you decide to </p>"
+      + "<div id='eat2' class = 'choices'>"
+      + "<button id = 'callin' type = 'button' name = 'button' onclick = 'choice24()'>Call in Sick</button>"
+      + "<button id = 'tough' type = 'button' name = 'button' onclick = 'choice25()'>Try to Tough it Out</button>"
+      + "</div>";
+      remove.remove();
+    }
     </script>
 
   </div>
