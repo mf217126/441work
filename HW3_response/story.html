@@ -16,6 +16,17 @@
         border: 2px dashed red;
         text-align: center;
       }
+      .console {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: auto;
+        padding-right: auto;
+        text-align: center;
+      }
+      .secret {
+        visibility: hidden;
+      }
       #body {
         float: left;
         margin:3px;
@@ -36,7 +47,10 @@ You decide to get out and explore the town you’re in. What do you choose to do
     <div id = "secondchoice"></div>
     <div id = "thirdchoice"></div>
     <div id = "fourthchoice"></div>
-
+    <div id = "fifthchoice"></div>
+    <div id = "sixthchoice"></div>
+    <div id = "seventhchoice"></div>
+    <div id = "secret" class = "secret"></div>
    <script type="text/javascript">
 
       function choice1(){
@@ -188,6 +202,7 @@ You decide to get out and explore the town you’re in. What do you choose to do
       + "<button id = 'speeddemon' type = 'button' name = 'button' onclick = 'choice17()'>Pedal Faster</button>"
       + "<button id = 'obedience' type = 'button' name = 'button' onclick = 'choice18()'>Stop for Him</button>"
       + "</div>";
+      remove.remove();
     }
     function choice7(){
       var print, remove;
@@ -243,6 +258,251 @@ You decide to get out and explore the town you’re in. What do you choose to do
       + "<button id = 'callin' type = 'button' name = 'button' onclick = 'choice24()'>Call in Sick</button>"
       + "<button id = 'tough' type = 'button' name = 'button' onclick = 'choice25()'>Try to Tough it Out</button>"
       + "</div>";
+      remove.remove();
+    }
+    function choice14(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("joboffer");
+      print.innerHTML = "<p> You accept the job offer right away. After all, what could possibly be better than working for Mr. Rative? He’ll surely pay better just being his go-fer than you would for working for your other boss. She has the documents right there, too, ready for you to sign! All she’s asking you for is your date of birth, your address, your bank account, your phone and email address, the name of your first pet, a picture of your driver’s license, and your social security number; how much luckier could you get? She says she’ll call you in a couple of days.</p>"
+      + "<p>You wait eagerly for the call, unable to contain your excitement for this job of a lifetime. The days pass, then a week, and then you go to buy some ramen for supper one night and your check bounces. You also find out that you now have an extensive criminal record that includes corporate sabotage and robbing a liquor store. Needless to say, you never get that call, and you end up having to deal with the FBI and try to explain how exactly you were in two places at the same time. You don’t get charged, but they also never catch the woman, who turned out to not be a secretary at all. You end up moving back to live with your parents in their basement, leaving this whole experience in Myville behind you. There’s an important life lesson somewhere in this, but whatever it is, you can’t really figure it out. Needless to say, you never give someone your phone number again.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice15(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("joboffer");
+      print.innerHTML = "<p> “No way, crazy lady!” you say. “I don’t even know you!” You promptly get on your bike and pedal away as fast as you can. Alright, so maybe you overreacted. Just a bit. But who on earth offers a job when you run into them? I mean, WHO!!?? She could be a serial killer, for all you know. I mean, she looked harmless enough, but you can never be too sure…</p>"
+      + "<p>The next day you start your work as a harmless, mild-mannered janitor. There’s your college degree working for you! You are the best janitor ever, though; and your boss moves you up from the position of janitor to custodian. You don’t get paid extra; it’s just a higher ranking. You’re so excited for the change that you treat yourself to a bag of sweet-ish fish from the store near your house and a movie streamed from some website that pirates them. You sigh in relief as you watch Barbie gush about Ken, and the 3D adventure ends with a happily ever after. In the end, you’re glad that you didn’t take that job. Being the office’s custodian is so much more rewarding.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice16(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("joboffer");
+      print.innerHTML = "<p>“I’ll think about it,” you say tentatively. You still aren’t quite sure about it, but seven times the pay is seven times the pay, and it IS the CEO of Money Grubbing Industries that you would be working for.</p>"
+      + "<p> You know you have to think about it quickly, but you aren’t quite sure. You go to work the next day and find out your custodian job… isn’t what it’s cracked up to be. I mean, it’s alright, but some of your co-workers are just rude to you, and you feel like an outsider a lot of the time. One day you accidentally let it slip that you are thinking about applying to be the go-fer at MGI, and your boss hears about it. Immediately he starts ranting about that “no-good penny-pincher” and informs you of all the dirt rotten things ol’ Luke has done over the years. There seems to be some rivalry going on between them which…you honestly didn’t know about. Finally, the deadline for the application is coming up, and you have to make a decision. What do you do?</p>"
+      + "<div id = 'decision1' class = 'choices'>"
+      + "<button id = 'accept1' type = 'button' name = 'button' onclick = 'choice26()'>Call the Lady to Accept</button>"
+      + "<button id = 'decline' type = 'button' name = 'button' onclick = 'choice27()'>Stay with Your Boss</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice17(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("copout");
+      print.innerHTML = "<p>  You pedal like crazy, knowing if you just push yourself a little more you can lose the cop and come out victorious! Sure, he has a motorbike, but your legs are magnificent, muscled machines, and can win out against an engine any old day! You come to a steep incline, and begin to sweat as your muscles work. Huh. Maybe you should have thought this out a little bit more. Strangely enough, the thing that comes to mind is the little red engine that could. “I think I can, I think I can!” you huff under your breath. You are only partially aware as the sirens cut off and an engine growls quietly beside you. Another inch up the incline and you realize the cop is just standing there, watching with his arms crossed. OK, maybe you didn’t think this one through very well…</p>"
+      + "<p>You end up incarcerated overnight for assault with a bicycle and resisting arrest. The cop doesn’t charge you for biking away, exactly, something about it being “too pathetic to really be escaping,” but the lady isn’t as forgiving. She’s also isn’t as indigenous as you, so she’s able to get a tougher lawyer than you are able to afford (which is none). Needless to say, you are unable to get to work on your first day and lose the job you’d had set up here in Myville. The only thing that this town has given you was a fine and a criminal record. You are completely OK with leaving this whole experience behind you and moving back with your parents.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice18(){
+      var print, remove;
+      print = document.getElementById("thirdchoice");
+      remove = document.getElementById("copout");
+      print.innerHTML = "<p>You stop for the police officer, suddenly feeling guilty for ignoring that person when they could’ve been hurt. The cop just sighs and begins to write you a ticket. This is the first ticket you’ve ever gotten, and you immediately begin to feel bad. The disappointed look on his face doesn’t help, either. How do you respond?</p>"
+      + "<div id = 'officer' class = 'choices'>"
+      + "<button id = 'responsible' type = 'button' name = 'button' onclick = 'choice28()'>Take it Like the Responsible Adult You Are</button>"
+      + "<button id = 'cry2' type = 'button' name = 'button' onclick = 'choice29()'>Start Crying</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice19(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("tomatojuice");
+      print.innerHTML = "<p> You take a bath in the tomato juice first to try to draw the smell out of your skin. It stinks, and it takes a while, but eventually you are able to get it out. By that time it is two in the morning, and you’re just happy you have four hours of sleep before you have to get up and get ready for your first day of work.</p>"
+      + "<p>You are a little tired, but you are able to do your janitorial duties for the day, and are rewarded with a pat on your back for your efforts. Not only that, but you met a guy named Tom, who went through the same experience as you. You both commiserate over that awful nasal assault, and eventually form a support group for people who were sprayed by skunks. Strangely enough, these people become your best friends and Myville becomes a safe haven for those who have suffered from smelly wildlife. You are happy, and feel as if you have accomplished something great in your life. Helping others is the best thing you could have done, not only for them, but for yourself.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice20(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("tomatojuice");
+      print.innerHTML = "<p>You decide to forget about bathing in tomato juice to get rid of the smell, and decide to make soup instead. What? You’re hungry! Besides, tomato soup is just what you need, and lunch is right here, right now! You got to have energy for work tomorrow, after all.</p>"
+      + "<p>The next day you lose your job – (but it was only on the first day!). Your boss apparently can’t stand recreational drug abuse or liars, which was…nice to know about him. You probably should have used that juice to get rid of the skunky smell, rather than eat it. You fix your mistake the next day, but by then it’s too late. Luckily, you are able to get a job as a custodian at Burger Bell which…well, doesn’t necessarily pay as well as your first job, but it’s a job! Eventually, you are able to put the skunky experience behind you, and after a couple of years are recommended as a sous chef for a mildly good restaurant. Apparently you make a mean tomato soup, and they can’t wait to have you on board! Myville may not be what you originally thought it was going to be, but in some ways, this is better.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice21(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("robbery");
+      print.innerHTML = "<p>You decide to call 911. Immediately you tell the operator that there’s a robbery happening at the JaeCei Yenny’s on South North, and she tells you to stay on the phone while she gets the cops. In a couple minutes you hear sirens, and a bunch of black and white cars pull up. They manage the situation quite well, and are able to get someone in through the back without the guy knowing. Soon he is arrested, and you are praised for your bravery and quick thinking, even though you really didn’t do anything. The police officer who tackled the perpetrator is a motorcycle cop named Stan. He’s actually a likeable guy, and you find that the whole department is friendly.</p>"
+      + "<p>You work a couple of weeks at your job as a janitor, but after the robbery it isn’t really all that…exciting. Besides that, the office is full of jerks who would sooner sneer at you than become friends. Soon you decide you want to be on the Myville police force, and begin your training to be a cop.</p>"
+      + "<p>There are bullies here too, of course, but they are tempered by the majority of friendly officers who help you learn just what it means to protect the people in your town. It is definitely different than what you originally had in mind, and more dangerous, but it gives you a sense of family and an adrenaline rush you would have otherwise been unable to find at your previous vocation. Your parents are slightly disapproving, but you still come visit them at Christmas, so they can’t complain too much. After all, you are writing your story, not theirs, and you believe this new chapter is opening quite well.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice22(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("robbery");
+      print.innerHTML = "<p> You rock on the floor and begin to cry for your Mommy. After all, she’s a superhero, she can fix this! Unfortunately, you draw the attention of the robber, who appears to debate whether he should shoot you or comfort you.</p>"
+      + "<p>“Shut up!” he growls, pointing the gun at you. His hand is trembling, and all of his attention is now on you. He is distracted enough by your sobbing that he is unaware of the situation at hand. While he is staring at you stupidly, someone attacks him while another person calls 911. Soon he is arrested and is being carted off to prison. The guy who tackled him receives praises and pats on the back. He gets a medal for his bravery and heroism, as well as a key to the city of Myville. You think that you should at least get a little recognition. After all, it was you who made the guy unaware of his surroundings, enough that that other person was able to get a hold of him. Apparently they don’t give out rewards for distractors, however. Just heroes. Which you think is stupid.</p>"
+      + "<p> Work the next day is brutal. Not only are you a janitor, but somehow news has gotten out about the robbery and your involvement in it. Your coworkers taunt and make fun of you, making your life absolutely miserable. Luckily, the office begins to lose interest in the subject after about two months. A far more interesting subject has come up for them to talk about: Jenny the accountant got a belly button piercing and it has become infected. You are glad that the attention has been drawn away from you and you can now just be a plain, mild-mannered janitor who works for Tye Twad. You aren’t quite anonymous (now you probably never will be), but you are as close as you’re going to get, and you’re just fine with that. You’re happy with being just plain, ordinary you.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice23(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("robbery");
+      print.innerHTML = "<p> You decide to rush forward to save the day. You’re there, and you’re awesome! Besides, everyone here looks so scared out of their minds, you doubt any of those sissies will do anything to help themselves. Looks like you’re the one for the job!</p>"
+      + "<p>The guy turns around just as you take a leap. Surprise shows on his face, and then there’s a loud BANG! You aren’t quite sure what happened, but you hear the cashier scream and the robber’s face pale, and suddenly you’re on the ground. It feels like you’ve been punched in the gut, but worse.</p>"
+      + "<p>In a couple minutes, you’re dead. Right before you lose consciousness, you hear sirens. Too late, you realize that help is on the way; but it’s over now. Your story in Myville has ended before it’s really begun.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice24(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("eat2");
+      print.innerHTML = "<p> You decide to call in sick for your first day. You have the number for your manager, and explain to her you can’t make it to work today. You’re just not feeling well; you’re quite under the weather. She says that’s OK, and that she can cover for you. Relieved, you take the day off and use that time to get better.</p>"
+      + "<p>You return to work on Tuesday, but you’re in for a nasty surprise. Calling in sick on the first day isn’t necessarily a commendable thing to do, especially in your boss’s eyes. Your manager apologizes to you, explaining that she honestly tried, but your boss refused to let it slide. You don’t know whether she is lying about trying, or if your boss truly is that heartless; in any case, you’re out of a job and now need to go look for another one.</p>"
+      + "<p>You end up starting a catering business, and begin to earn money making and delivering food for parties and special events. You’re surprisingly quite good, and begin to move up in the community. Eventually, you gain enough influence to begin advocating for quality improvement of non-profit services such as the soup kitchen. You become a voice for the people who live around you, and eventually you realize that, had you not gotten that food poisoning all those months ago, you may never have been able to make your city a better place for those living there, or even realized the need. As it is, you are glad that the Myville you leave will be a better place than the Myville you began your journey in.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice25(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("eat2");
+      print.innerHTML = "<p> You decide to try to go to work anyway. You feel absolutely cruddy, but it’s better than nothing, and you feel an obligation because it’s your first day. You arrive sick, and the first thing you have to clean out is your manager’s garbage, which has a week-old salad in there as well as some black orange peels and a pile of greasy noodles in Singapore Sauce. You promptly throw up in her trash and she squeals, disgusted by the mess you’ve made. In all honesty, it really isn’t your fault.</p>"
+      + "<p>You apologize profusely and explain to her that you had some bad stroganoff the night before, and you still aren’t feeling up to snuff. She asks you why you didn’t call in sick, and you respond by telling her that you didn’t want to take the first day of work off. She is still disgusted, but your boss overhears and can’t help but be impressed. Tye Twad doesn’t give out praise very often, you find out later, which is why it is so surprising when he commends you for your strong work ethic and offers you a raise. What do you do?</p>"
+      + "<div id = 'offer2' class = 'choices'>"
+      + "<button id = 'take' type = 'button' name = 'button' onclick = 'choice30()'>Take the Offer</button>"
+      + "<button id = 'decline2' type = 'button' name = 'button' onclick = 'choice31()'>Decline the Offer</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice26(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("decision1");
+      print.innerHTML = "<p> You decide to call the lady and accept her offer. After all, what could possibly be better than working for Mr. Rative? He’ll surely pay better just being his go-fer than you would for working for your other boss. She has the documents right there, too, ready for you to sign! All she’s asking you for is your date of birth, your address, your bank account, your phone and email address, the name of your first pet, a picture of your driver’s license, and your social security number; how much luckier could you get? She says she’ll call you in a couple of days.</p>"
+      + "<p>You wait eagerly for the call, unable to contain your excitement for this job of a lifetime. The days pass, then a week, and then you go to buy some ramen for supper one night and your check bounces. You also find out that you now have an extensive criminal record that includes corporate sabotage and robbing a liquor store. Needless to say, you never get that call, and you end up having to deal with the FBI and try to explain how exactly you were in two places at the same time. You don’t get charged, but they also never catch the woman, who turned out to not be a secretary at all. You end up moving back to live with your parents in their basement, leaving this whole experience in Myville behind you. There’s an important life lesson somewhere in this, but whatever it is, you can’t really figure it out. Needless to say, you never give someone your phone number again.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice27(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("decision1");
+      print.innerHTML = "<p> You decide to stay with your boss. He is so “impressed with your integrity” he immediately offers you a raise. What do you do?</p>"
+      + "<div id = 'offer2' class = 'choices'>"
+      + "<button id = 'take' type = 'button' name = 'button' onclick = 'choice30()'>Take the Offer</button>"
+      + "<button id = 'decline2' type = 'button' name = 'button' onclick = 'choice31()'>Decline the Offer</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice28(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("officer");
+      print.innerHTML = "<p> You take the ticket like the responsible adult you are. After all, it won’t do for you to throw a temper tantrum like some spoiled twelve year-old. Immediately after the ticket, you go over to the person to apologize. You realize she could have been hurt, and feel worse for not stopping when you collided with her in the first place. For some reason, after her initial anger and shock, she appears guilty as well, and brushes off your apologies. You sigh. This ticket is going to be expensive, and you can’t really afford expensive right now. However, it is somewhat your fault, so you should probably just buckle down and get it paid.</p>"
+      + "<p>After you pay the fine, you go to sleep. You have a job in the morning, and it won’t do to be exhausted.</p>"
+      + "<p>The incident soon becomes a faded memory in the back of your mind. You become an upstanding citizen of Myville, and build a life here for yourself. In ten years, you become mayor of Myville, and are always careful to watch out for pedestrians.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice29(){
+      var print, remove;
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("officer");
+      print.innerHTML = "<p> You start to cry as you realize what you’ve done. The officer shifts awkwardly as you break down on the sidewalk, unsure of how to react. After all, it isn’t like they train cops for this kind of thing. Once you are down to sniffles he gets out a Clean-X and lets you blow. You still have to pay the fine, but he goes a lot easier on you than he could if he so chose.</p>"
+      + "<p>Turns out, he isn’t that bad of a guy. You become like a little sibling to him, and on Tuesdays after work both of you get coffee and doughnuts. He helps you get adjusted to being on your own and to life in Myville in general. He also knows where the best bakeries are at, too, so that’s a bonus!</p>"
+      + "<p>Eventually the ticket becomes just another day, and life gets better as you navigate living in a new place. Things aren’t as awful as they originally seemed, and thanks to your new cop friend, you have discovered the joy of bacon doughnuts!</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice30(){
+      var print, remove;
+      print = document.getElementById("fifthchoice");
+      remove = document.getElementById("offer2");
+      print.innerHTML = "<p> You decide to accept the offer of a raise. After all, it isn’t every day you get an opportunity this fantastic! You are moved up from janitor to go-fer, which is surprisingly a whole fifty percent more lucrative. Your boss shares a secret with you: he actually started off as a coffee boy before he became the great hellion of business that the world sees today. With hard work and determination, he made his way up through the ranks to become CEO of Skin Flint Inc, and he sees the same potential in you.</p>"
+      + "<p>Surprisingly, his story turns out to be prophetic when in fifteen years you actually do become CEO of SFI. You become one of the best-known people in the world, featuring not only in People’s Magazine, but also getting interviews with TV reporters on your opinions of world happenings.</p>"
+      + "<p>All of it was thanks to Myville, and to your boss believing you could be something greater than you ever thought you could be.</p>"
+      + "<p>The End.</p>";
+      + remove.remove();
+    }
+    function choice31(){
+      var print, remove;
+      print = document.getElementById("fifthchoice");
+      remove = document.getElementById("offer2");
+      print.innerHTML = "<p> You turn down his offer for a job. (Why on earth would you do that!?) You are too selfless to take something that someone else may want just as badly, and you believe that getting a raise should be dependent on what you do for the company, and not on any sort of choices you make. However, your boss tells you the offer still stands, as long as you want it. For now, you are happy being a janitor.</p>"
+      + "<p>One day you are mopping the floors when you see a shady character down the halls. He spots you, and immediately begins to run. You start after him when you realize something is wrong. Looking down, you see a flashing light and realize it’s a bomb! You have to do something, you can’t just let it sit there! To fix this situation, you first have to lift up the cover:</p>"
+      + "<div id = 'bomb!' class = 'choices'>"
+      + "<button id = 'bombcover' type = 'button' name = 'button' onclick = 'bomb()'>Lift the Cover!</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function bomb(){
+      var print, remove, code, entered, keys, check, secs, clock, blown;
+      print = document.getElementById("sixthchoice");
+      remove = document.getElementById("bomb!");
+      secs = 30;
+      blown = document.getElementById("secret");
+      print.innerHTML = "<p>The code is: A0126HB</p>"
+      + "<div id = 'diffuse' class = 'console'>"
+      + "<div id = 'display' class = 'timer'></div>"
+      + "<input type = 'text' id='code' value = '0000000'>"
+      + "<button id = 'enter' type = 'button' name = 'button' onclick = 'check()'>ENTER</button>"
+      + "</div>";
+      subtract = document.getElementById("enter");
+      clock = setInterval(function() {
+        var digital = document.getElementById("display");
+        if (secs == 1 || blown.innerHTML == "o") {
+          clearInterval(clock);
+          if (secs == 1){
+            choice32();
+            subtract.remove();
+          }
+        }
+        else {
+          secs = secs-1;
+          digital.innerHTML = secs;
+        }
+      }, 750);
+      remove.remove();
+    }
+    function check(){
+      var code, entered, keys, check, secs;
+      code = document.getElementById("code").value;
+      entered = code.split("");
+      keys = ["A","0","1","2","6","H","B"];
+      check = 0;
+      secs = document.getElementById("secret");
+      secs.innerHTML = "o";
+      for (check = 0; keys.length; check++){
+        if (entered[check] == keys[check]){
+          if (check == keys.length){
+              choice33();
+          }
+        }
+        else {
+              choice32();
+        }
+      }
+    }
+    function choice32(){
+        var print, remove;
+        print = document.getElementById("seventhchoice");
+        remove = document.getElementById("code","enter");
+        print.innerHTML = "<p><h1>Boom!</h1> You mess up disarming the bomb, and it explodes. Your story in Myville has ended, much too soon in your opinion. It’s too bad these kinds of tales don’t have an epilogue.</p>"
+        + "<p>The End.</p>";
+        remove.remove();
+    }
+    function choice33(){
+      var print, remove;
+      print = document.getElementById("seventhchoice");
+      remove = document.getElementById("code","enter");
+      print.innerHTML = "<p> You’ve saved the day! The bomb squad comes in and disposes the bomb, and you are known as the town hero. You get praised and commended on your bravery and intelligence.  You are awarded with a great monetary prize by your boss, and this time you accept his raise. News anchors tell your story across the country, and Myville awards you with a key to the city. When you came here, you were expecting a job, not to become a hero! But that’s what you are now, and no one is forgetting it soon.</p>"
+      + "<p>The End.</p>";
       remove.remove();
     }
     </script>
