@@ -4,33 +4,56 @@
 <!--styling in CSS-->
   <style>
       .storybody {
+        color: rgb(40, 40, 40);
+        background-image: url("images/old paper.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        font: 1.2em "Teen Light", Poor Richard, serif;
         float: left;
-        margin: 6px;
-        padding: 3px;
-        border: 4px dashed darkgreen;
+        margin: 20px;
+        padding: 30px;
+/*        border: 4px dashed darkgreen; */
       }
       .choices {
-        margin: 2px;
+        background-image: url("images/smallerdenim.png");
+        width: 50%;
+        margin-left:auto;
+        margin-right: auto;
         margin-top: 8px;
         padding: 5px;
-        border: 2px dashed red;
+        border: 2px dashed rgb(250,240,200);
         text-align: center;
       }
       .console {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        padding-left: auto;
-        padding-right: auto;
+        width: 144px;
         text-align: center;
+        font: "Square", Courier, sans-serif;
+        -moz-text-decoration-color: red; /* Code for Firefox */
+        text-decoration-color: red;
+        background-color: grey;
+        border: 3px solid darkgrey;
       }
       .secret {
         visibility: hidden;
       }
-      #body {
+      body {
+        background-image: url("images/painting.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
         float: left;
         margin:3px;
-        border: 2px solid black;
+/*        border: 2px solid black;  */
+      }
+      button {
+        color: rgb(256,0,0);
+        background-image: url("images/glass.jpg");
+        font: 1em "Teen Light", Poor Richard, serif;
+        font-weight: bold;
+        border: 1px dashed rgb(250,240,200);
+        margin: 12px;
       }
    </style>
    <title>Myville</title>
@@ -295,7 +318,7 @@ You decide to get out and explore the town you’re in. What do you choose to do
       print = document.getElementById("thirdchoice");
       remove = document.getElementById("copout");
       print.innerHTML = "<p>  You pedal like crazy, knowing if you just push yourself a little more you can lose the cop and come out victorious! Sure, he has a motorbike, but your legs are magnificent, muscled machines, and can win out against an engine any old day! You come to a steep incline, and begin to sweat as your muscles work. Huh. Maybe you should have thought this out a little bit more. Strangely enough, the thing that comes to mind is the little red engine that could. “I think I can, I think I can!” you huff under your breath. You are only partially aware as the sirens cut off and an engine growls quietly beside you. Another inch up the incline and you realize the cop is just standing there, watching with his arms crossed. OK, maybe you didn’t think this one through very well…</p>"
-      + "<p>You end up incarcerated overnight for assault with a bicycle and resisting arrest. The cop doesn’t charge you for biking away, exactly, something about it being “too pathetic to really be escaping,” but the lady isn’t as forgiving. She’s also isn’t as indigenous as you, so she’s able to get a tougher lawyer than you are able to afford (which is none). Needless to say, you are unable to get to work on your first day and lose the job you’d had set up here in Myville. The only thing that this town has given you was a fine and a criminal record. You are completely OK with leaving this whole experience behind you and moving back with your parents.</p>"
+      + "<p>You end up incarcerated overnight for assault with a bicycle and resisting arrest. The cop doesn’t charge you for biking away, exactly, something about it being “too pathetic to really be escaping,” but the lady isn’t as forgiving. She’s also isn’t as indigent as you, so she’s able to get a tougher lawyer than you are able to afford (which is none). Needless to say, you are unable to get to work on your first day and lose the job you’d had set up here in Myville. The only thing that this town has given you was a fine and a criminal record. You are completely OK with leaving this whole experience behind you and moving back with your parents.</p>"
       + "<p>The End.</p>";
       remove.remove();
     }
@@ -478,7 +501,7 @@ You decide to get out and explore the town you’re in. What do you choose to do
       check = 0;
       secs = document.getElementById("secret");
       secs.innerHTML = "o";
-      for (check = 0; keys.length; check++){
+      for (check = 0; check <= keys.length; check++){
         if (entered[check] == keys[check]){
           if (check == keys.length){
               choice33();
