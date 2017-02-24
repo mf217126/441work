@@ -25,16 +25,15 @@
         text-align: center;
       }
       .console {
+        color: red;
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 144px;
         text-align: center;
         font: "Square", Courier, sans-serif;
-        -moz-text-decoration-color: red; /* Code for Firefox */
-        text-decoration-color: red;
-        background-color: grey;
-        border: 3px solid darkgrey;
+        background-color: rgb(50,50,50);
+        border: 3px solid rgb(30,30,30);
       }
       .secret {
         visibility: hidden;
@@ -74,6 +73,8 @@ You decide to get out and explore the town you’re in. What do you choose to do
     <div id = "sixthchoice"></div>
     <div id = "seventhchoice"></div>
     <div id = "secret" class = "secret"></div>
+    <div id = "toys" class = "secret"></div>
+    <div id = "food" class = "secret"></div>
    <script type="text/javascript">
 
       function choice1(){
@@ -119,20 +120,28 @@ You decide to get out and explore the town you’re in. What do you choose to do
       }
 
       function choice3(){
-        var print, remove, choice1, animal, adoption, scenario;
+        var print, remove, choice1, animal, adoption, scenario, toys, food;
         print = document.getElementById('secondchoice');
         remove = document.getElementById('set2');
+        toys = document.getElementById("toys");
+        food = document.getElementById("food");
         choice1 = ["...a puppy!","...a baby turtle!","...a kitten!","...a baby skunk!"];
         animal = Math.floor(choice1.length*Math.random());
 
         if (animal == 0){
           adoption = "<p>...a puppy! Aww! The little guy is squirming around and wagging happily. In fact, the canine is wagging so hard that the pup is practically vibrating! This baby animal will make a great companion as you start off on this new adventure called life. What’s your new buddy’s name?</p>";
+          toys.innerHTML = "squeaky bone";
+          food.innerHTML = "puppy chow";
         }
         else if (animal == 1) {
           adoption = "<p>...a baby turtle! Aww, how cute! You scoop up the terrified terrapin and make a trap of your hands. The head and legs withdraw, and you notice right away the shell is a beautiful collage of greens, blues, and reds. You decide to name the shelled reptile.</p>";
+          toys.innerHTML = "heat lamp and tank";
+          food.innerHTML = "salad greens";
         }
         else if (animal == 2) {
           adoption = "<p>...a kitten! The tiny feline is so cute and fluffy, you can’t help but fall in love with the little furball as soon as you see that tiny wet nose and hear that rumbling purr. You decide the baby animal should have a name.";
+          toys.innerHTML = "pom-pom mouse";
+          food.innerHTML = "kitten kibble";
         }
         if (animal == 3) {
           scenario = "<p>...a baby skunk! Aw, how cu...Oh, wait...WHAT! Oh, crud, oh crud ohcrud! By the time you realize exactly what you’ve uncovered, it’s too late. The baby skunk has already lifted its tail and has sprayed you in the face. Your eyes are stinging, and everything just…stinks. What do you do? </p>"
@@ -159,10 +168,12 @@ You decide to get out and explore the town you’re in. What do you choose to do
 
 
     function choiceName(){
-      var name, remove, print;
+      var name, remove, print, secret;
       name = document.getElementById("name").value;
       print = document.getElementById("thirdchoice");
       remove = document.getElementById("pets");
+      secret = document.getElementById("secret");
+      secret.innerHTML = ""+ name + "";
       print.innerHTML = "<p> Welcome, "
         + name
         +"! Does "
@@ -171,8 +182,8 @@ You decide to get out and explore the town you’re in. What do you choose to do
         +"<div id = 'complete1' class = 'choices'>"
           +"<button id = 'continue' type = 'button' name = 'button' onclick = 'choice9()'>Yes</button>"
           +"<button id = 'finish' type = 'button' name = 'button' onclick = 'choice10()'>No</button>"
-          +"</div>";
-          remove.remove();
+        +"</div>";
+      remove.remove();
     }
     function choiceName2(){
       var name, remove, print;
@@ -248,6 +259,48 @@ You decide to get out and explore the town you’re in. What do you choose to do
       + "<input type = 'text' id = 'name' value = 'Name Your Skunk!'>"
       + "<button type = 'button' name = 'button' onclick = 'choiceName2()'>Submit!</button>"
       + "</div>";
+      remove.remove();
+    }
+    function choice9(){
+      var print, remove, name, text;
+      name = document.getElementById("secret");
+      print = document.getElementById("fourthchoice");
+      text = document.getElementById("fourthchoice");
+      remove = document.getElementById("complete1");
+      text = name.innerHTML;
+
+      print.innerHTML = "<p>You decide you need to buy something for your new pet before going home. Where will you go to buy for "
+      + text
+      + "?</p>"
+      + "<div id = 'stores' class = 'choices'>"
+      + "<button id = 'petstore' type = 'button' name = 'button' onclick = 'choice34()'>Petstore</button>"
+      + "<button id = 'supermarket' type = 'button' name = 'button' onclick = 'choice35()'>Supermarket</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice10(){
+      var print, remove, name, text;
+      name = document.getElementById("secret");
+      print = document.getElementById("fourthchoice");
+      remove = document.getElementById("complete1");
+      text = document.getElementById("fourthchoice");
+      text = name.innerHTML;
+
+      print.innerHTML = "<p>You decide you don't need anything for now and take "
+      + text
+      + " home. The next day you go to work, and have to leave your new pet behind. "
+      + text
+      + " ends up not only escaping the pile of blankets you used as a barrier, but also eats some of your wallpaper and scratches lines in the couch. You probably should have gotten something to control "
+      + text
+      + " better, but you didn't think about it. Now your landlady has smelled an animal, and she also has a strict no-pets-allowed policy. Not only do you have to move appartments should you wish to keep your pet, but you also have to pay for the damages to the walls.</p>"
+      + "<p> You can't afford a different appartment, so you end up having to give "
+      + text
+      + " away. Luckily, the new owner isn't that bad of a guy, and you know he'll give "
+      + text
+      + " a good home. It really is too bad you weren't able to keep your animal companion, but as you become involved in first work, and then in other activities, you're also somewhat glad it turned out this way. You would never have been able to spend much time with "
+      + text
+      + " as it was, and this way the little creature will get the love and care every pet deserves. </p>"
+      + "<p>The End.</p>";
       remove.remove();
     }
     function choice11(){
@@ -525,6 +578,116 @@ You decide to get out and explore the town you’re in. What do you choose to do
       print = document.getElementById("seventhchoice");
       remove = document.getElementById("code","enter");
       print.innerHTML = "<p> You’ve saved the day! The bomb squad comes in and disposes the bomb, and you are known as the town hero. You get praised and commended on your bravery and intelligence.  You are awarded with a great monetary prize by your boss, and this time you accept his raise. News anchors tell your story across the country, and Myville awards you with a key to the city. When you came here, you were expecting a job, not to become a hero! But that’s what you are now, and no one is forgetting it soon.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice34(){
+      var print, remove, name, text, toy;
+      print = document.getElementById("fifthchoice");
+      remove = document.getElementById("stores");
+      name = document.getElementById("secret");
+      toy = document.getElementById("toys");
+      play = document.getElementById("fifthchoice");
+      text = document.getElementById("fifthchoice");
+      text = name.innerHTML;
+      play = toy.innerHTML;
+      print.innerHTML = "<p>  You decide to go to the pet store. After all, "
+      + text
+      + " needs toys. There, you see an ad for a pet-sitting service that would be perfect for your situation! You tear off one of the tags on the ad, and decide to call for an appointment as soon as you get home. You get the precious little pipsqueak a "
+      + play
+      + ". It’s too large for the baby animal to swallow, and should hopefully keep your pal busy while you’re at work. The two of you head back home to the apartment, where you call the pet sitter while "
+      + text
+      + " naps. Hey, "
+      + text
+      + "’s a baby, what do you expect?</p>"
+      + "<p>The girl you talk on the phone with is happy to take on one more customer, and promises she’s had plenty of experience before with the various pets her younger siblings have had over the years. She’s in high school and just wants to earn a little extra money this summer before going back, so she can watch "
+      + text
+      + " while you’re at work. She also charges less than minimum wage, which is great because you don’t think you could afford more.</p>"
+      + "<p>The situation works out well for you, and as the sun sets you are able to come back home and spend time with "
+      + text
+      + " after a sometimes grueling workday. Of course, in the fall you have to find a new petsitter, but by then you’re out of the apartment and can afford someone a little more pricey. In all, you are glad that you checked those bushes and now have a little companion to keep you company during your time here in Myville. Now, you just have to figure out how you’re going to break the news about "
+      + text
+      + "'s existence to your parents when you have to bring your pet over for Christmas. Oh well. You’ll think of something.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice35(){
+      var print, remove, name, text, food, eat;
+      print = document.getElementById("fifthchoice");
+      remove = document.getElementById("stores");
+      name = document.getElementById("secret");
+      text = document.getElementById("fifthchoice");
+      food = document.getElementById("food");
+      eat = document.getElementById("fifthchoice");
+      text = name.innerHTML;
+      eat = food.innerHTML;
+
+      print.innerHTML = "<p> You decide to go to the grocery store with "
+      + text
+      + ". After all, baby animals eat lots and lots of food. You decide to buy some "
+      + eat
+      + ", which is just what "
+      + text
+      + " needs. People give you weird looks when they notice movement in your hoodie pocket, in which you’ve hidden "
+      + text
+      + ", but no one says anything and you are able to get out of the store with the groceries and the ramen you’ve bought.</p>"
+      + "On the way home, however, "
+      + text
+      + " jumps out of your hoodie pocket and starts to waddle through the crowd. You panic and go after your new companion, but just as you are about to pick "
+      + text
+      + " up, a teenager scoops up your animal instead and begins to take off through the crowd. How do you respond?</p>"
+      + "<div id = 'petnapping' class = 'choices'>"
+      + "<button id = 'chase' type = 'button' name = 'button' onclick = 'choice36()'>Go After Him</button>"
+      + "<button id = 'ohwell' type = 'button' name = 'button' onclick = 'choice37()'>You Win Some, You Lose Some</button>"
+      + "</div>";
+      remove.remove();
+    }
+    function choice36(){
+      var print, remove, name, text;
+      print = document.getElementById("sixthchoice");
+      remove = document.getElementById("petnapping");
+      name = document.getElementById("secret");
+      text = document.getElementById("sixthchoice");
+      text = name.innerHTML;
+      print.innerHTML = "<p> You decide to go after the culprit. He’s just stolen your baby animal! You can’t let him get away with that!</p>"
+      + text
+      + " is so small and helpless. How can you just leave your little buddy in the hands of that maniac?</p>"
+      + "<p> You catch up to the teen and tackle him to the ground. He’s too surprised to react in time, and you land a couple of blows before scooping "
+      + text
+      + " up in your safe arms. A crowd has gathered around, and the six o’clock news catches it all on camera. The delinquent is soon arrested and you are hailed as a hero.</p>"
+      + "<p> Soon, you and "
+      + text
+      + " become incredibly famous. You are invited onto talk shows and you even write a book called “"
+      + text
+      + " and Me: a True Story About the Incredible Bond Between a Pet and a Person” that becomes a bestseller worldwide. You eventually quit your job to become an actor and move to Hollywood where you and your friend have your own show, with "
+      + text
+      + " as the star, and you as a supporting character.</p>"
+      + "<p> Even though you now are rich and famous and own a house of your own in Beverly Hills, you will never forget that dingy little neighborhood in Myville where you first met "
+      + text
+      + ". Now you cannot imagine a life without your best friend (or without all that money you’ve gotten), and are incredibly grateful to that otherwise insignificant city. It is the reason you have "
+      + text
+      + " with you today, after all, and you wouldn’t trade this experience for anything in the world.</p>"
+      + "<p>The End.</p>";
+      remove.remove();
+    }
+    function choice37(){
+      var print, remove, name, text, food, eat;
+      print = document.getElementById("sixthchoice");
+      remove = document.getElementById("petnapping");
+      name = document.getElementById("secret");
+      text = document.getElementById("sixthchoice");
+      food = document.getElementById("food");
+      eat = document.getElementById("sixthchoice");
+      text = name.innerHTML;
+      eat = food.innerHTML;
+      print.innerHTML = "<p> Oh well. You win some, you lose some. As you walk home you decide to keep the "
+      + eat
+      + " for yourself. Maybe you can have it for supper. Waste not, want not, you always say.</p>"
+      + "<p> Your stay in Myville is alright, but it’s not very exciting. The people are OK, but everything’s just kind of… blah. Sometimes you wonder if you would be happier if you had kept your pet, but there’s no going back now. You didn’t really form an emotional attachment to the animal; you barely knew "
+      + text
+      + " for an hour, and now that day is just another footnote to the rest of your life. One good thing that came from this experience, however, is that you now have a new favorite food. When you go to your parents’ for Thanksgiving, you bring some "
+      + eat
+      + " with you to supplement the holiday feast.</p>"
       + "<p>The End.</p>";
       remove.remove();
     }
