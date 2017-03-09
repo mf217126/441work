@@ -31,7 +31,7 @@
         margin-right: auto;
         width: 144px;
         text-align: center;
-        font: "Square", Courier, sans-serif;
+        font: "Square", "Courier", sans-serif;
         background-color: rgb(50,50,50);
         border: 3px solid rgb(30,30,30);
       }
@@ -49,16 +49,22 @@
       button {
         color: rgb(256,0,0);
         background-image: url("images/glass.jpg");
-        font: 1em "Teen Light", Poor Richard, serif;
+        font: 1em "Teen Light", "Poor Richard", sans-serif;
         font-weight: bold;
         border: 1px dashed rgb(250,240,200);
         margin: 12px;
       }
+/*      @(choice32().js)body{
+        background-image: url("images/lava texture.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+      } */
    </style>
    <title>Myville</title>
  </head>
  <body>
-   <div class = "storybody">
+   <div id = "story" class = "storybody">
    <p> Welcome to Myville, where anything is possible! There are so many choices to be made, so many ways this could go right…or go wrong. You’re starting a new career here, in a new home, and all you have now is a bike and a cruddy little apartment. Oh, and $100 of money left over after rent, appliances, and food bills have been paid for the month.
 You decide to get out and explore the town you’re in. What do you choose to do? </p>
     <div id = "set1" class = "choices">
@@ -569,6 +575,8 @@ You decide to get out and explore the town you’re in. What do you choose to do
         var print, remove;
         print = document.getElementById("seventhchoice");
         remove = document.getElementById("code","enter");
+//        document.getElementById("story").style.backgroundimage = "images/redtexture..jpg";
+//        document.getElementsByTagName("body").style.backgroundimage = "images/lava texture.jpg";
         print.innerHTML = "<p><h1>Boom!</h1> You mess up disarming the bomb, and it explodes. Your story in Myville has ended, much too soon in your opinion. It’s too bad these kinds of tales don’t have an epilogue.</p>"
         + "<p>The End.</p>";
         remove.remove();
