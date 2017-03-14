@@ -6,57 +6,84 @@ INTERACTIVE FIBONACCI PRINTING
 
 // // Import readline
 var readline = require('readline');
+// var exec = require('child_process').exec;
+// exec("open -a Terminal .")
 var number1 = readline.createInterface(process.stdin, process.stdout);
 
-var sequence = {
-  num: ''
-};
-number1.question("Enter a number of sequence position for the Fibonacci sequence:", function(num){
-  // var fibb = [number1,number2,number3];
-  console.log(num);
-  num = Number(num);
-  if (typeof num === "number"){
-//    for (i=0, i < num, i++){
-//    function sequence(){
-    // var number1 = 0;
-    // var number2 = 1;
-    // var i = 0;
-//    if (typeof digits === 'number'){
-      // for (i=0; i < num; i++){
-      //   var number3 = number1+number2;
-      //   if (typeof number3 ==="number"){
-      //     var number1 = number2;
-      //     var number2 = number3;
-      //   }
-      // }
-      // console.log(`final number: ${fibb(process.argv[2])}`)
-//    }
-    //  else{
-    //    console.log('not a number');
-    //  }
-      function fib(num) {
-          // console.log(num);
-          if (num === 0) {
-            return 0;
-          } else if (num === 1) {
-            return 1;
-          } else {
-            return fib(num - 1) + fib(num - 2);
-          }
-       console.log(`final number is${fib(process.argv[2])}`);
 
-       process.stdout.write(`The fibonacci number is ${process.argv[2]}`);
-      };
+number1.question("Enter a number of sequence position for the Fibonacci sequence:\n", function(num){
+//  link = parseInt(num);
+//  num = parseInt(Number(num));
+    if (num.toLowerCase().trim() === 'exit'){
+        number1.close();
     }
     else{
-      console.log('no number was entered');
-      process.exit();
-    }
+     link = parseInt(num.trim());
+
+        function fib(link) {
+            // console.log(num);
+            if (String(link) == 'NaN'){
+              return `incalculable. Please enter a number to calculate, not a string.`;
+            }
+            else if (link === 0){
+//              var result = 0;
+                return 0;
+            }
+            else if (link === 1){
+//              var result = 1;
+                return 1;
+            }
+            else if (link >= 80){
+                return ( `incalculable.` + link + ` is too large a number. Input must be less than 80.`);
+            }
+            else{
+//              var result = fib(link - 1) + fib(link - 2);
+                return (fib(link-1) + fib(link-2));
+            }
+        };
+
+//        console.log(`final number is ` + result);
+        process.stdout.write(`The fibonacci number is ${fib(link)}`);
+        console.log(`\nEnter another number or type "exit" to leave:`);
+        // number1.setPrompt(`Enter another number to calculate, or type "exit" to leave:`);
+        // number1.prompt();
+        number1.on('line', function(num2){
+          if (num2.toLowerCase().trim() === 'exit'){
+              number1.close();
+          }
+          else{
+           link = parseInt(num2.trim());
+
+              function fib(link) {
+                  // console.log(num);
+                  if (String(link) == 'NaN'){
+                    return `incalculable. Please enter a number to calculate, not a string.`;
+                  }
+                  else if (link === 0) {
+      //              var result = 0;
+                      return 0;
+                  }
+                  else if (link === 1) {
+      //              var result = 1;
+                      return 1;
+                  }
+                  else if (link >= 80){
+                      return ( `incalculable.` + link + ` is too large a number. Input must be less than 80.`);
+                  }
+                  else {
+      //              var result = fib(link - 1) + fib(link - 2);
+                      return (fib(link-1) + fib(link-2));
+                  }
+              };
+
+      //        console.log(`final number is ` + result);
+              process.stdout.write(`The fibonacci number is ${fib(link)}`);
+              console.log(`\nEnter another number or type "exit" to leave:`);
+            }
+          });
+        }
+    });
+number1.on('close', function(){
+  console.log(`\n Done!`);
+  process.exit();
 });
-//
-// // Define the Fibonacci Algorithm Function
-//I'm going to try something else first.
-// function number(input){
-//   var one = process.argv.indexOf(input);
-// }
-// var digits = number('--Enter-fib-sequence-number');
