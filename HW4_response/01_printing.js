@@ -18,7 +18,4 @@ var path = require("path");
 var string1 = `\n`;
 var string3 = `Whoa, part 1 is done`;
 
-console.log(string1);
-console.log(`The name of this file is ${path.basename(__filename)}.`);
-console.log(string3);
-console.log(string1);
+console.log(string1 + `The name of this file is ${path.basename(__filename)}. \n` + string3 + string1);
