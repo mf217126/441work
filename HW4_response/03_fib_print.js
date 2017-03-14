@@ -34,7 +34,7 @@ number1.question("Enter a number of sequence position for the Fibonacci sequence
                 return 1;
             }
             else if (link >= 80){
-                return ( `incalculable.` + link + ` is too large a number. Input must be less than 80.`);
+                return ( `incalculable. ` + link + ` is too large a number. Input must be less than 80.`);
             }
             else{
 //              var result = fib(link - 1) + fib(link - 2);
@@ -68,7 +68,7 @@ number1.question("Enter a number of sequence position for the Fibonacci sequence
                       return 1;
                   }
                   else if (link >= 80){
-                      return ( `incalculable.` + link + ` is too large a number. Input must be less than 80.`);
+                      return ( `incalculable. ` + link + ` is too large a number. Input must be less than 80.`);
                   }
                   else {
       //              var result = fib(link - 1) + fib(link - 2);
