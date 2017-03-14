@@ -1,4 +1,4 @@
-#Homework 4 Response
+# Homework 4 Response
 In this homework I used js in node.js to print stuff to the console, I allowed users to input information using flags in anoter js, and finally created a calculator to calculate parts of the fibonacci sequence under the value of 80.
 ## Part 1: PRINTING
 This part was easy. I was able to print some words using console.log().
